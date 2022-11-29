@@ -1,0 +1,22 @@
+{
+  "taskA": [
+    {
+      "input": "",
+      "expected": ""
+    },
+    {
+      "input": "",
+      "expected": ""
+    }
+  ],
+  "taskB": [
+    {
+      "input": "",
+      "expected": ""
+    },
+    {
+      "input": "",
+      "expected": ""
+    }
+  ]
+}

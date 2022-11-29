@@ -2,28 +2,27 @@
   "name": "aoc",
   "version": "1.0.0",
   "description": "Advent of Code Template",
+  "type": "commonjs",
   "scripts": {
-    "lint": "ts-standard",
-    "lint:fix": "ts-standard --fix",
-    "dev": "ts-node-dev --respawn --quiet src/index.ts"
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "dev": "nodemon src/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/everchanger/aoc.git"
+    "url": "git+https://github.com/everchanger/aoc-2021.git"
   },
   "author": "Joakim Rosenstam",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/everchanger/aoc/issues"
+    "url": "https://github.com/everchanger/aoc-2021/issues"
   },
-  "homepage": "https://github.com/everchanger/aoc#readme",
+  "homepage": "https://github.com/everchanger/aoc-2021#readme",
   "devDependencies": {
-    "@types/fs-extra": "^9.0.4",
-    "@types/node": "12.12.2",
     "colors": "^1.4.0",
-    "fs-extra": "^9.0.1",
-    "ts-node-dev": "^1.0.0",
-    "ts-standard": "^9.0.0",
-    "typescript": "^4.1.2"
+    "dotenv": "^16.0.3",
+    "fs-extra": "^11.0.0",
+    "standard": "^16.0.3",
+    "nodemon": "^2.0.20"
   }
 }

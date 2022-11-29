@@ -1,5 +1,5 @@
 {
-    "javascript.validate.enable": false,
+    "editor.formatOnSave": false,
+    "eslint.enable": false,
     "standard.autoFixOnSave": true,
-    "standard.engine": "ts-standard"
 }
