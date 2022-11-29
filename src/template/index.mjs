@@ -1,6 +1,6 @@
 async function taskA (input) {
   console.log('task A', input)
-  return input.toLowerCase()
+  return input
 }
 
 async function taskB (input) {
