@@ -48,14 +48,28 @@ const prepareDay = async (dayPath, day, year) => {
   }
 }
 
+const runTests = async (func, data, part)  => {
+  let pass = true
+  for (const t of data[part]) {
+    const result = await func(t.input)
+    const testOk = result === parseInt(t.expected)
+    if (!testOk) {
+      console.log(kleur.red(`Test failed, expected [${t.expected}], got [${result}] (input ${t.input})`))
+    }
+    pass = pass && testOk
+  }
+
+  return pass
+}
+
 const run = async (dayPath) => {
-  const { taskA, taskB, test } = await import(`${dayPath}/index.js`)
+  const { taskA, taskB } = await import(`${dayPath}/index.js`)
   const testInput = JSON.parse(fs.readFileSync(`${dayPath}/test.json`, 'utf8'))
 
   // Run tests before executing the tasks
   console.log(kleur.cyan('\nRunning tests for A...'))
 
-  let pass = await test(testInput, 'taskA')
+  let pass = await runTests(taskA, testInput.taskA)
   if (!pass) {
     console.error(kleur.red('Tests failed for taskA, aborting'))
     return;
@@ -73,7 +87,7 @@ const run = async (dayPath) => {
 
   console.log(kleur.cyan('\nRunning tests for B...'))
 
-  pass = await test(testInput, 'taskB')
+  pass = await runTests(taskB, testInput.taskB)
   if (!pass) {
     console.error(kleur.red('Tests failed for taskB, aborting'))
     return
