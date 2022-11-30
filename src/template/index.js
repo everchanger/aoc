@@ -1,11 +1,9 @@
 async function taskA (input) {
-  console.log('task A', input)
-  return input
+  return ''
 }
 
 async function taskB (input) {
-  console.log('task B', input)
-  return input
+  return ''
 }
 
 async function test (data, part) {

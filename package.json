@@ -2,11 +2,11 @@
   "name": "aoc",
   "version": "1.0.0",
   "description": "Advent of Code Template",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon --delay 5 src/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/everchanger/aoc-2021#readme",
   "devDependencies": {
-    "colors": "^1.4.0",
+    "kleur": "^4.1.5",
     "dotenv": "^16.0.3",
     "fs-extra": "^11.0.0",
     "standard": "^16.0.3",
