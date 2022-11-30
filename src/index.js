@@ -50,7 +50,7 @@ const prepareDay = async (dayPath, day, year) => {
 
 const runTests = async (func, data, part)  => {
   let pass = true
-  for (const t of data[part]) {
+  for (const t of data) {
     const result = await func(t.input)
     const testOk = result === parseInt(t.expected)
     if (!testOk) {
